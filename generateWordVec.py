@@ -70,7 +70,7 @@ if __name__ == "__main__":
     #列表应是一个二维数组，每一行表示一个句子词组
     #它认为列表中的每个单词b都是一个句子,因此它为每个单词中的每个单词执行Word2Vec,而不是b中的每个单词。 
     model = Word2Vec(texts,min_count=1,size=50,window=5);
-    model.wv.save_word2vec_format(dataPath + 'judicial.model.bin', binary=True);
+    model.wv.save_word2vec_format(dataPath + 'wordVector\\judicial.model_size50.bin', binary=True);
     
     if(not os.path.exists(dataPath + "train_new.csv")):
         train.to_csv(dataPath + "train_new.csv",index=False,encoding='utf-8');
