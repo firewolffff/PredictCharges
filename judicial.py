@@ -82,7 +82,7 @@ else:
 #texts = creatCorproa(train['words'].values);
 
 #加载词向量模型 Key_Value
-model = KeyedVectors.load_word2vec_format(dataPath + "judicial.model_50_win7.bin",binary=True);
+model = KeyedVectors.load_word2vec_format(dataPath + "wordVector\\judicial.model_50_win7.bin",binary=True);
 train = train.fillna(value={'words':' '});
 #label = pd.read_csv(dataPath + "label.csv");
 #train = train.merge(label,on='ids',how='left');
